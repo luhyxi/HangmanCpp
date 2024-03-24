@@ -14,11 +14,14 @@ class LanguageInput
     {
 
 public:
-    LanguageInput(int WordCategory);
+    LanguageInput(string WordCategory); // Constructor
+    
+    void TakeGuess(char letterChosen);
+    void FreeLetter(char letter, int index);
+    string GetHiddenWord(); // It's weird that both getter and attribute are public
     
     int LettersLeft;
-    
-    void TakeGuess();
+    string HiddenWord;
 
 private:
     string OriginalWord;
